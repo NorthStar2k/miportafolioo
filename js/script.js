@@ -409,3 +409,24 @@ formulario.addEventListener("submit", async function(e){
     botonEnviar.textContent = "Enviar mensaje";
 
 });
+
+// ==============================================
+// MENÚ DESPLEGABLE MÓVIL
+// ==============================================
+
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+if (menuToggle && navLinks) {
+    // Abre y cierra el menú al hacer clic en el botón ☰
+    menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+    });
+
+    // Cierra el menú automáticamente cuando el usuario hace clic en un enlace
+    document.querySelectorAll("header nav ul li a").forEach(link => {
+        link.addEventListener("click", () => {
+            navLinks.classList.remove("active");
+        });
+    });
+}
