@@ -174,13 +174,6 @@ nav a{
 
 
 }
-/* ============================================== */
-/* BOTÓN MENÚ HAMBURGUESA (OCULTO EN PC)          */
-/* ============================================== */
-
-.menu-toggle {
-    display: none;
-}
 
 /* ============================================== */
 /* LÍNEA ANIMADA DEL MENÚ                         */
@@ -1313,107 +1306,117 @@ footer::before{
 @media (max-width:768px){
 
     header{
-        padding:15px 20px;
+
+        padding:20px;
+
     }
 
     nav{
-        /* Mantiene el título a la izquierda y el botón a la derecha */
-        flex-direction: row; 
-        justify-content: space-between;
-        align-items: center;
-        gap: 0;
-        position: relative;
+
+        flex-direction:column;
+
+        gap:20px;
+
     }
 
     nav h1{
-        font-size:26px;
-        text-align:left;
+
+        font-size:34px;
+
+        text-align:center;
+
     }
 
-    /* Mostramos el botón hamburguesa */
-    .menu-toggle {
-        display: block;
-        background: none;
-        border: none;
-        color: white;
-        font-size: 28px;
-        cursor: pointer;
-    }
-
-    /* OCULTAMOS EL MENÚ EN MÓVIL POR DEFECTO */
     nav ul{
-        display: none; 
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        position: absolute;
-        top: 100%;
-        left: -20px; /* Compensa el padding del header */
-        width: calc(100% + 40px);
-        background: #1e1e1e;
-        padding: 25px 0;
-        box-shadow: 0 10px 20px rgba(0,0,0,.5);
-        border-bottom: 1px solid #2e2e2e;
-    }
 
-    /* CLASE ACTIVA (JavaScript la añade/quita al hacer clic) */
-    nav ul.active{
-        display: flex;
+        flex-direction:column;
+
+        align-items:center;
+
+        gap:20px;
+
     }
 
     #hero{
+
         padding:60px 20px;
+
     }
 
     .hero-contenido{
+
         flex-direction:column;
+
         text-align:center;
+
         gap:40px;
+
     }
 
     .hero-texto h2{
+
         font-size:42px;
+
     }
 
     .hero-texto h3{
+
         font-size:28px;
+
+
     }
 
     .hero-texto p{
+
         font-size:18px;
+
     }
 
     .tecnologias{
+
         justify-content:center;
+
     }
 
     .hero-imagen img{
+
         max-width:280px;
+
     }
 
     #sobre-mi,
     #servicios,
     #proyectos,
     #contacto{
+
         padding:60px 20px;
+
     }
 
     .contenedor-servicios{
+
         grid-template-columns:1fr;
+
     }
 
     .contenedor-proyectos{
+
         grid-template-columns:1fr;
+
     }
 
     .contenedor-contacto{
+
         grid-template-columns:1fr;
+
     }
 
     .habilidades{
-        position: relative;
+         position: relative;
+
         overflow: hidden;
         width:100%;
+
     }
 
 }
