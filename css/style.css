@@ -1,0 +1,1648 @@
+/* ============================================== */
+/* RESET GENERAL                                  */
+/* ============================================== */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ============================================== */
+/* SCROLL SUAVE                                   */
+/* ============================================== */
+
+html{
+
+    scroll-behavior: smooth;
+
+}
+
+/* ============================================== */
+/* ESTILOS GENERALES                              */
+/* ============================================== */
+body{
+
+    background:
+    radial-gradient(circle at top right, rgba(0,191,255,.10), transparent 35%),
+    radial-gradient(circle at bottom left, rgba(0,191,255,.06), transparent 30%),
+    #121212;
+
+    color:#ffffff;
+
+    font-family:Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+    position: relative;
+
+}
+/* ============================================== */
+/* ANIMACIÓN GENERAL DE LAS SECCIONES             */
+/* ============================================== */
+
+section{
+
+    transition: .3s;
+
+}
+
+/* ============================================== */
+/* SCROLL DEL MENÚ                                */
+/* ============================================== */
+
+#hero,
+#sobre-mi,
+#servicios,
+#proyectos,
+#contacto{
+
+    scroll-margin-top: 120px;
+
+}
+
+
+/* ============================================== */
+/* BARRA DE PROGRESO                              */
+/* ============================================== */
+
+#barra-scroll{
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 0%;
+
+    height: 4px;
+
+    background: #00bfff;
+
+    z-index: 9999;
+
+    transition: width .15s linear;
+
+}
+
+/* ============================================== */
+/* HEADER                                         */
+/* ============================================== */
+
+header{
+
+    background-color: #1e1e1e;
+
+    padding: 20px 50px;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+  backdrop-filter: blur(10px);
+
+    box-shadow: 0 5px 20px rgba(0,0,0,.25);
+}
+
+
+/* ============================================== */
+/* NAVEGACIÓN                                     */
+/* ============================================== */
+
+nav{
+
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:40px;
+
+}
+
+ nav h1{
+
+    font-size:42px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+header.scroll nav h1{
+
+    font-size:36px;
+
+    color:#33ccff;
+
+}
+
+nav h1:hover{
+
+    color:#00bfff;
+
+    transform:scale(1.05);
+
+    text-shadow:0 0 20px rgba(0,191,255,.6);
+
+}
+
+
+nav ul{
+
+    display: flex;
+    list-style: none;
+    gap: 30px;
+
+}
+
+
+nav a{
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: .3s;
+
+    position: relative;
+
+    padding-bottom: 8px;
+
+
+}
+
+/* ============================================== */
+/* LÍNEA ANIMADA DEL MENÚ                         */
+/* ============================================== */
+
+nav a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:0;
+
+    width:0;
+
+    height:3px;
+
+    background:#00bfff;
+
+    transition:.3s;
+
+}
+
+
+nav a:hover{
+
+    color:#00bfff;
+
+}
+
+nav a:hover::after{
+
+    width:100%;
+
+}
+
+nav a.activo{
+
+    color:#00bfff;
+
+}
+
+nav a.activo::after{
+
+    width:100%;
+
+}
+
+/* ============================================== */
+/* HERO                                           */
+/* ============================================== */
+
+#hero{
+
+    min-height: 85vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 40px 50px;
+
+}
+
+
+/* ============================================== */
+/* CONTENEDOR HERO                                */
+/* ============================================== */
+
+.hero-contenido{
+
+    max-width: 1200px;
+
+    width: 100%;
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 80px;
+
+}
+
+
+/* ============================================== */
+/* TEXTO HERO                                     */
+/* ============================================== */
+
+.hero-texto{
+
+    flex: 1;
+
+}
+
+
+.hero-texto h2{
+
+    font-size: 60px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.hero-texto h3{
+
+    font-size: 35px;
+
+    color: #00bfff;
+
+    margin-bottom: 25px;
+
+}
+
+
+.hero-texto p{
+
+    font-size: 20px;
+
+    line-height: 1.8;
+
+    color: #d8d8d8;
+
+}
+
+
+/* ============================================== */
+/* TECNOLOGÍAS                                    */
+/* ============================================== */
+
+.tecnologias{
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin: 35px 0;
+
+}
+
+
+.tecnologias span{
+
+    border: 1px solid #00bfff;
+
+    color: #00bfff;
+
+    padding: 8px 18px;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    transition: .3s;
+
+}
+
+
+.tecnologias span:hover{
+
+    background-color: #00bfff;
+
+    color: #121212;
+
+    transform: translateY(-4px);
+
+    cursor: pointer;
+
+}
+
+
+/* ============================================== */
+/* BOTÓN                                          */
+/* ============================================== */
+
+.btn{
+
+    display: inline-block;
+
+    background-color: #00bfff;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 15px 35px;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    transition: .3s;
+
+}
+
+
+.btn:hover{
+
+    background-color: #0095d9;
+
+    transform: translateY(-5px);
+
+}
+
+
+/* ============================================== */
+/* IMAGEN HERO                                    */
+/* ============================================== */
+
+.hero-imagen{
+
+    flex: 1;
+
+    display: flex;
+
+    justify-content: center;
+
+}
+
+
+.hero-imagen img{
+
+    width: 100%;
+
+    max-width: 450px;
+
+    animation: flotar 4s ease-in-out infinite;
+    filter: drop-shadow(0 25px 45px rgba(0,191,255,.20));
+transition: .4s;
+
+}
+.hero-imagen img:hover{
+
+    transform: scale(1.03);
+
+    filter: drop-shadow(0 35px 60px rgba(0,191,255,.35));
+
+}
+@keyframes flotar{
+
+    0%{
+
+        transform: translateY(0);
+
+    }
+
+    50%{
+
+        transform: translateY(-15px);
+
+    }
+
+    100%{
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+/* ============================================== */
+/* SOBRE MÍ                                       */
+/* ============================================== */
+
+#sobre-mi{
+
+    padding: 80px 50px;
+
+}
+
+
+/* Título */
+
+#sobre-mi h2{
+
+    text-align: center;
+
+    font-size: 48px;
+
+    margin-bottom: 60px;
+
+}
+
+
+/* Contenedor */
+
+.sobre-contenido{
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 70px;
+
+}
+
+
+/* Texto */
+
+.sobre-texto{
+
+    flex: 1;
+
+    position: relative;
+
+    padding-left: 30px;
+
+}
+.sobre-texto::before{
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    top: 0;
+
+    width: 4px;
+
+    height: 100%;
+
+    background: linear-gradient(
+
+        #00bfff,
+
+        #33ccff
+
+    );
+
+    border-radius: 20px;
+
+}
+
+
+.sobre-texto p{
+
+    color: #d8d8d8;
+
+    font-size: 20px;
+
+    line-height: 1.8;
+
+    margin-bottom: 20px;
+
+}
+
+/* ============================================== */
+/* ESTADÍSTICAS                                   */
+/* ============================================== */
+
+.estadisticas{
+
+    display: flex;
+
+    gap: 25px;
+
+    margin: 35px 0;
+
+    flex-wrap: wrap;
+
+}
+
+
+/* Cada estadística */
+
+.estadistica{
+
+    min-width: 120px;
+
+    padding: 20px;
+
+    text-align: center;
+
+    background: rgba(255,255,255,.04);
+
+    border: 1px solid rgba(255,255,255,.08);
+
+    border-radius: 15px;
+
+    transition: .3s;
+
+}
+
+
+/* Efecto */
+
+.estadistica:hover{
+
+    transform: translateY(-6px);
+
+    border-color: #00bfff;
+
+    box-shadow: 0 10px 25px rgba(0,191,255,.15);
+
+}
+
+
+/* Número */
+
+.estadistica .numero{
+
+    display: block;
+
+    font-size: 35px;
+
+    font-weight: bold;
+
+    color: #00bfff;
+
+    margin-bottom: 8px;
+
+}
+
+
+/* Texto */
+
+.estadistica p{
+
+    margin: 0;
+
+    font-size: 15px;
+
+    color: #d8d8d8;
+
+}
+
+/* Tarjeta */
+
+.habilidades{
+
+    width: 360px;
+
+    background: #1d1d1d;
+
+    border: 1px solid #2e2e2e;
+
+    border-radius: 20px;
+
+    padding: 35px;
+
+    transition: .3s;
+
+}
+.habilidades:hover{
+
+    transform: translateY(-10px);
+
+    box-shadow: 0 15px 35px rgba(0,191,255,.20);
+
+}
+
+
+.habilidades h3{
+
+    color: #00bfff;
+
+    margin-bottom: 25px;
+
+}
+
+
+.habilidades ul{
+
+    list-style: none;
+
+}
+
+
+.habilidades li{
+
+    margin-bottom: 18px;
+
+    transition: .3s;
+
+}
+
+
+.habilidades li:hover{
+
+    color: #00bfff;
+
+    transform: translateX(10px);
+
+}
+
+
+/* ============================================== */
+/* SERVICIOS                                      */
+/* ============================================== */
+
+#servicios{
+
+    padding: 80px 50px;
+
+}
+
+/* Título */
+
+#servicios h2{
+
+    text-align: center;
+
+    font-size: 48px;
+
+    margin-bottom: 60px;
+
+}
+
+/* Contenedor */
+
+.contenedor-servicios{
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3,1fr);
+
+    gap: 30px;
+
+}
+
+/* Tarjetas */
+
+.card,
+.habilidades,
+.proyecto{
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: rgba(255,255,255,.04);
+
+    backdrop-filter: blur(12px);
+
+    -webkit-backdrop-filter: blur(12px);
+
+    border-radius: 20px;
+
+    padding: 40px;
+
+    text-align: center;
+
+    border: 1px solid #2e2e2e;
+
+    transition: .3s;
+transition: transform .3s ease;
+transform-style: preserve-3d;
+will-change: transform;
+}
+
+.habilidades{
+
+    width: 360px;
+
+    flex-shrink: 0;
+
+}
+.habilidad{
+    margin-bottom: 25px;
+}
+
+.barra{
+
+    width: 100%;
+
+    height: 10px;
+
+    background: #2a2a2a;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+}
+
+.progreso{
+
+    width: 0;
+
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        #00bfff,
+        #33ccff
+    );
+
+    border-radius: 20px;
+
+    transition: width 1.5s ease;
+
+}
+
+
+
+.card::before,
+.habilidades::before,
+.proyecto::before{
+    
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:60%;
+
+    height:100%;
+
+    background:linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.12),
+
+        transparent
+
+    );
+
+    transition:.7s;
+     transform-style: preserve-3d;
+
+    will-change: transform;
+
+}
+.card:hover::before,
+.habilidades:hover::before,
+.proyecto:hover::before{
+
+    left:160%;
+
+}
+
+/* Hover */
+
+.card:hover{
+
+    transform: translateY(-10px);
+
+    box-shadow: 0 15px 35px rgba(0,191,255,.20);
+
+}
+.icono{
+
+    font-size: 55px;
+
+    margin-bottom: 20px;
+
+}
+
+/* Título */
+
+.card h3{
+
+    color: #00bfff;
+
+    margin-bottom: 20px;
+
+}
+
+/* Texto */
+
+.card p{
+
+    color: #d8d8d8;
+
+    line-height: 1.8;
+
+}
+
+
+/* ============================================== */
+/* PROYECTOS                                      */
+/* ============================================== */
+
+#proyectos{
+
+    padding: 80px 50px;
+
+}
+
+/* Título */
+
+#proyectos h2{
+
+    text-align: center;
+
+    font-size: 48px;
+
+    margin-bottom: 60px;
+
+}
+
+/* Grid */
+
+.contenedor-proyectos{
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3,1fr);
+
+    gap: 30px;
+
+}
+/* Tarjeta */
+
+.proyecto{
+    
+
+    position: relative;
+
+    overflow: hidden;
+
+
+    background: #1d1d1d;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    border: 1px solid #2e2e2e;
+
+    transition: .3s;
+
+}
+
+/* Hover */
+
+.proyecto:hover{
+
+      transform: scale(1.08);
+
+    box-shadow: 0 15px 35px rgba(0,191,255,.20);
+
+}
+
+/* Imagen */
+
+.proyecto img{
+
+    width: 100%;
+    transition:.4s;
+    height: 220px;
+
+    object-fit: cover;
+
+    display: block;
+
+}
+
+/* Información */
+
+.info-proyecto{
+
+    padding: 25px;
+
+}
+
+.info-proyecto h3{
+
+    color: #00bfff;
+
+    margin-bottom: 15px;
+
+}
+
+.info-proyecto p{
+
+    color: #d8d8d8;
+
+    line-height: 1.8;
+
+    margin-bottom: 25px;
+
+}
+/* Botón */
+
+.btn-proyecto{
+
+    display: inline-block;
+
+    background: #00bfff;
+
+    button{
+
+    box-shadow:0 10px 25px rgba(0,191,255,.25);
+
+}
+    color: white;
+
+    text-decoration: none;
+
+    padding: 12px 25px;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    transition: .3s;
+
+}
+
+.btn-proyecto:hover{
+
+    background: #0095d9;
+
+    transform: scale(1.05);
+
+}
+
+
+/* ============================================== */
+/* CONTACTO                                       */
+/* ============================================== */
+
+#contacto{
+
+    padding: 80px 50px;
+
+}
+
+#contacto h2{
+
+    text-align: center;
+
+    font-size: 48px;
+
+    margin-bottom: 15px;
+
+}
+
+.subtitulo-contacto{
+
+    text-align: center;
+
+    color: #d8d8d8;
+
+    margin-bottom: 50px;
+
+}
+
+.contenedor-contacto{
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 2fr;
+
+    gap: 50px;
+
+}
+/* Información */
+
+.info-contacto{
+
+    background: #1d1d1d;
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    border: 1px solid #2e2e2e;
+
+}
+
+.info-contacto h3{
+
+    color: #00bfff;
+
+    margin-bottom: 20px;
+
+}
+
+.info-contacto p{
+
+    margin-bottom: 18px;
+
+    color: #d8d8d8;
+
+}/* Formulario */
+
+form{
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+}
+
+input,
+textarea{
+
+    background: #1d1d1d;
+
+    color: white;
+
+    border: 1px solid #333;
+
+    padding: 18px;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    outline: none;
+
+    transition: .3s;
+
+}
+
+input:focus,
+textarea:focus{
+
+    border-color: #00bfff;
+
+    box-shadow: 0 0 10px rgba(0,191,255,.25);
+
+}
+
+button{
+
+    background: #00bfff;
+
+    color: white;
+
+    border: none;
+
+    padding: 18px;
+
+    border-radius: 30px;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+button:hover{
+
+    background: #0095d9;
+
+    transform: translateY(-5px);
+
+}
+
+/* ================================================= */
+/* FOOTER                                            */
+/* ================================================= */
+
+/* ============================================== */
+/* FOOTER                                         */
+/* ============================================== */
+
+footer{
+
+    background-color: #1a1a1a;
+
+    margin-top: 80px;
+
+    padding: 40px 20px;
+
+    border-top: 1px solid #2e2e2e;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+footer::before{
+
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+
+    height: 300px;
+
+    background: rgba(0,191,255,.08);
+
+    border-radius: 50%;
+
+    filter: blur(120px);
+
+    top: -150px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+}
+
+.footer-contenido{
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    text-align: center;
+
+}
+
+.footer-contenido h3{
+
+    color: #00bfff;
+
+    font-size: 28px;
+
+    margin-bottom: 15px;
+
+    transition: .3s;
+
+    cursor: default;
+
+}
+.footer-contenido h3::after{
+
+    content: "";
+
+    display: block;
+
+    width: 80px;
+
+    height: 3px;
+
+    background: #00bfff;
+
+    margin: 15px auto;
+
+    border-radius: 30px;
+
+}
+.footer-contenido h3:hover{
+
+    color: #33ccff;
+
+    text-shadow: 0 0 20px rgba(0,191,255,.7);
+
+}
+
+.footer-contenido p{
+
+    color: #d8d8d8;
+
+    margin-bottom: 10px;
+
+    line-height: 1.6;
+
+}
+/* ============================================== */
+/* RESPONSIVE - TABLETS                           */
+/* ============================================== */
+
+@media (max-width:992px){
+
+    .hero-contenido{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+    .sobre-contenido{
+
+        flex-direction:column;
+
+    }
+
+    .contenedor-servicios{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .contenedor-proyectos{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .contenedor-contacto{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+/* ============================================== */
+/* RESPONSIVE - CELULARES                         */
+/* ============================================== */
+
+@media (max-width:768px){
+
+    header{
+
+        padding:20px;
+
+    }
+
+    nav{
+
+        flex-direction:column;
+
+        gap:20px;
+
+    }
+
+    nav h1{
+
+        font-size:34px;
+
+        text-align:center;
+
+    }
+
+    nav ul{
+
+        flex-direction:column;
+
+        align-items:center;
+
+        gap:20px;
+
+    }
+
+    #hero{
+
+        padding:60px 20px;
+
+    }
+
+    .hero-contenido{
+
+        flex-direction:column;
+
+        text-align:center;
+
+        gap:40px;
+
+    }
+
+    .hero-texto h2{
+
+        font-size:42px;
+
+    }
+
+    .hero-texto h3{
+
+        font-size:28px;
+
+
+    }
+
+    .hero-texto p{
+
+        font-size:18px;
+
+    }
+
+    .tecnologias{
+
+        justify-content:center;
+
+    }
+
+    .hero-imagen img{
+
+        max-width:280px;
+
+    }
+
+    #sobre-mi,
+    #servicios,
+    #proyectos,
+    #contacto{
+
+        padding:60px 20px;
+
+    }
+
+    .contenedor-servicios{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .contenedor-proyectos{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .contenedor-contacto{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .habilidades{
+         position: relative;
+
+        overflow: hidden;
+        width:100%;
+
+    }
+
+}
+/* ============================================== */
+/* BOTÓN VOLVER ARRIBA                            */
+/* ============================================== */
+
+#btn-arriba{
+
+    position: fixed;
+
+    right: 30px;
+
+    bottom: 30px;
+
+    width: 55px;
+
+    height: 55px;
+
+    border-radius: 50%;
+
+    border: none;
+
+    background: #00bfff;
+
+    color: white;
+
+    font-size: 24px;
+
+    cursor: pointer;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,.35);
+
+    transition: .3s;
+
+    /* Nuevas líneas */
+    opacity: 0;
+
+    pointer-events: none;
+
+}
+
+/* Se agrega cuando bajas la página */
+
+#btn-arriba.mostrar{
+
+    opacity: 1;
+
+    pointer-events: auto;
+
+}
+
+/* Hover del botón */
+
+#btn-arriba:hover{
+
+    transform: translateY(-6px);
+
+    background: #0095d9;
+
+}
+.oculto{
+
+    opacity: 0;
+
+    transform: translateY(50px);
+
+    transition: all .8s ease;
+
+}
+
+.visible{
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+.info-contacto i{
+
+    color:#00bfff;
+
+    width:30px;
+
+    font-size:20px;
+
+}
+/* ============================================== */
+/* FONDO ANIMADO                                  */
+/* ============================================== */
+
+body::before,
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    width:500px;
+
+    height:500px;
+
+    border-radius:50%;
+
+    filter:blur(120px);
+
+    z-index:-1;
+
+    animation: moverFondo 18s ease-in-out infinite;
+
+}
+body::before{
+
+    background:rgba(0,191,255,.12);
+
+    top:-180px;
+
+    left:-180px;
+
+}
+
+body::after{
+
+    background:rgba(0,191,255,.08);
+
+    bottom:-220px;
+
+    right:-220px;
+
+    animation-delay:9s;
+
+}
+@keyframes moverFondo{
+
+    0%{
+        transform:translate(0,0);
+    }
+
+    25%{
+        transform:translate(80px,-40px);
+    }
+
+    50%{
+        transform:translate(-40px,60px);
+    }
+
+    75%{
+        transform:translate(60px,30px);
+    }
+
+    100%{
+        transform:translate(0,0);
+    }
+
+}
+/* ============================================== */
+/* CURSOR DEL EFECTO MÁQUINA DE ESCRIBIR           */
+/* ============================================== */
+
+#typing::after{
+
+    content: "|";
+
+    animation: cursor .7s infinite;
+
+}
+
+@keyframes cursor{
+
+    50%{
+
+        opacity: 0;
+
+    }
+
+}
+/* ============================================== */
+/* NAVBAR AL HACER SCROLL                         */
+/* ============================================== */
+
+header.scroll{
+
+    padding: 12px 50px;
+
+    background: rgba(18,18,18,.95);
+
+    backdrop-filter: blur(10px);
+
+    -webkit-backdrop-filter: blur(10px);
+
+    box-shadow: 0 8px 25px rgba(0,191,255,.15);
+
+    transition: all .3s ease;
+
+}
+/* ============================================== */
+/* MENSAJE DEL FORMULARIO (AJAX)                  */
+/* ============================================== */
+
+#mensaje-enviado{
+
+    margin-top:20px;
+
+    color:#00bfff;
+
+    font-weight:bold;
+
+    opacity:0;
+
+    transition:.4s;
+
+}
+
+#mensaje-enviado.mostrar{
+
+    opacity:1;
+
+}
+
+/* Botón mientras se envía */
+
+#btn-enviar:disabled{
+
+    opacity:.7;
+
+    cursor:not-allowed;
+
+}
