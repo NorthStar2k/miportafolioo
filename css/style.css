@@ -1763,8 +1763,10 @@ header.scroll{
 }
 
 /* ============================================== */
-/* MENÚ HAMBURGUESA - VERSIÓN MÓVIL              */
+/* MENÚ HAMBURGUESA                               */
 /* ============================================== */
+
+/* Botón oculto en computadoras */
 
 .menu-toggle{
 
@@ -1786,10 +1788,12 @@ header.scroll{
 
 
 /* ============================================== */
-/* CELULARES                                     */
+/* MENÚ MÓVIL                                    */
 /* ============================================== */
 
 @media (max-width: 768px){
+
+    /* Header */
 
     nav{
 
@@ -1800,15 +1804,34 @@ header.scroll{
     }
 
 
+    /* Nombre */
+
+    nav h1{
+
+        font-size: 28px;
+
+        white-space: nowrap;
+
+    }
+
+    .hero-texto h2{
+
+    font-size: 42px;
+
+}
+
+
+    /* Botón hamburguesa */
+
     nav .menu-toggle{
 
         display: block !important;
 
         background: transparent;
 
-        color: white;
-
         border: none;
+
+        color: white;
 
         font-size: 30px;
 
@@ -1818,6 +1841,8 @@ header.scroll{
 
     }
 
+
+    /* Menú cerrado */
 
     nav ul{
 
@@ -1831,12 +1856,20 @@ header.scroll{
 
         gap: 18px;
 
+        margin: 15px 0 0;
+
         padding: 20px 0;
 
-        margin: 0;
+        background: rgba(18, 18, 18, 0.95);
+
+        border-top: 1px solid #2e2e2e;
+
+        border-radius: 0 0 15px 15px;
 
     }
 
+
+    /* Menú abierto */
 
     nav ul.activo{
 

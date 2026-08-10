@@ -409,11 +409,40 @@ formulario.addEventListener("submit", async function(e){
     botonEnviar.textContent = "Enviar mensaje";
 
 });
+// ==============================================
+// MENÚ HAMBURGUESA
+// ==============================================
+
 const menuToggle = document.querySelector(".menu-toggle");
 const menu = document.querySelector("nav ul");
 
 menuToggle.addEventListener("click", () => {
 
     menu.classList.toggle("activo");
+
+    if(menu.classList.contains("activo")){
+
+        menuToggle.textContent = "✕";
+
+    }else{
+
+        menuToggle.textContent = "☰";
+
+    }
+
+});
+// Cerrar el menú al seleccionar una opción
+
+const enlacesMenu = document.querySelectorAll("nav ul a");
+
+enlacesMenu.forEach(enlace => {
+
+    enlace.addEventListener("click", () => {
+
+        menu.classList.remove("activo");
+
+        menuToggle.textContent = "☰";
+
+    });
 
 });
