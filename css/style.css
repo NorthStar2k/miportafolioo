@@ -1299,125 +1299,240 @@ footer::before{
     }
 
 }
+
+/* ============================================== */
+/* BOTÓN MENÚ HAMBURGUESA                         */
+/* ============================================== */
+
+.menu-toggle{
+
+    display: none;
+
+    background: none;
+
+    border: none;
+
+    color: white;
+
+    font-size: 30px;
+
+    cursor: pointer;
+
+}
+
 /* ============================================== */
 /* RESPONSIVE - CELULARES                         */
 /* ============================================== */
 
-@media (max-width:768px){
+@media (max-width: 768px){
+
+    /* ------------------------------------------ */
+    /* HEADER                                     */
+    /* ------------------------------------------ */
 
     header{
 
-        padding:20px;
+        padding: 20px;
 
     }
+
+
+    /* ------------------------------------------ */
+    /* NAVBAR                                     */
+    /* ------------------------------------------ */
 
     nav{
 
-        flex-direction:column;
+        flex-direction: row;
 
-        gap:20px;
+        justify-content: space-between;
+
+        align-items: center;
+
+        gap: 10px;
 
     }
+
+
+    /* Nombre del sitio */
 
     nav h1{
 
-        font-size:34px;
-
-        text-align:center;
+        font-size: 30px;
 
     }
+
+
+    /* Botón hamburguesa */
+
+    .menu-toggle{
+
+        display: block;
+
+    }
+
+
+    /* Menú de navegación */
 
     nav ul{
 
-        flex-direction:column;
+        display: none;
 
-        align-items:center;
+        flex-direction: column;
 
-        gap:20px;
+        width: 100%;
+
+        text-align: center;
+
+        gap: 20px;
 
     }
 
+
+    /* ------------------------------------------ */
+    /* HERO                                       */
+    /* ------------------------------------------ */
+
     #hero{
 
-        padding:60px 20px;
+        padding: 60px 20px;
 
     }
 
     .hero-contenido{
 
-        flex-direction:column;
+        flex-direction: column;
 
-        text-align:center;
+        text-align: center;
 
-        gap:40px;
+        gap: 40px;
 
     }
 
     .hero-texto h2{
 
-        font-size:42px;
+        font-size: 42px;
 
     }
 
     .hero-texto h3{
 
-        font-size:28px;
-
+        font-size: 28px;
 
     }
 
     .hero-texto p{
 
-        font-size:18px;
+        font-size: 18px;
 
     }
 
     .tecnologias{
 
-        justify-content:center;
+        justify-content: center;
 
     }
 
     .hero-imagen img{
 
-        max-width:280px;
+        max-width: 280px;
 
     }
+
+
+    /* ------------------------------------------ */
+    /* SECCIONES                                  */
+    /* ------------------------------------------ */
 
     #sobre-mi,
     #servicios,
     #proyectos,
     #contacto{
 
-        padding:60px 20px;
+        padding: 60px 20px;
 
     }
+
+
+    /* ------------------------------------------ */
+    /* SERVICIOS                                  */
+    /* ------------------------------------------ */
 
     .contenedor-servicios{
 
-        grid-template-columns:1fr;
+        grid-template-columns: 1fr;
 
     }
+
+
+    /* ------------------------------------------ */
+    /* PROYECTOS                                  */
+    /* ------------------------------------------ */
 
     .contenedor-proyectos{
 
-        grid-template-columns:1fr;
+        grid-template-columns: 1fr;
 
     }
+
+
+    /* ------------------------------------------ */
+    /* CONTACTO                                   */
+    /* ------------------------------------------ */
 
     .contenedor-contacto{
 
-        grid-template-columns:1fr;
+        grid-template-columns: 1fr;
 
     }
+
+
+    /* ------------------------------------------ */
+    /* HABILIDADES                                */
+    /* ------------------------------------------ */
 
     .habilidades{
-         position: relative;
+
+        position: relative;
 
         overflow: hidden;
-        width:100%;
+
+        width: 100%;
 
     }
+
+}
+
+
+/* ============================================== */
+/* MENÚ HAMBURGUESA                              */
+/* ============================================== */
+
+/* El botón está oculto en PC */
+
+.menu-toggle{
+
+    display: none;
+
+    background: none;
+
+    border: none;
+
+    color: white;
+
+    font-size: 30px;
+
+    cursor: pointer;
+
+}
+
+
+/* Cuando JavaScript agrega la clase "activo",
+   el menú vuelve a mostrarse */
+
+nav ul.activo{
+
+    display: flex;
 
 }
 /* ============================================== */
@@ -1644,5 +1759,89 @@ header.scroll{
     opacity:.7;
 
     cursor:not-allowed;
+
+}
+
+/* ============================================== */
+/* MENÚ HAMBURGUESA - VERSIÓN MÓVIL              */
+/* ============================================== */
+
+.menu-toggle{
+
+    display: none;
+
+    background: transparent;
+
+    border: none;
+
+    color: white;
+
+    font-size: 30px;
+
+    padding: 5px;
+
+    cursor: pointer;
+
+}
+
+
+/* ============================================== */
+/* CELULARES                                     */
+/* ============================================== */
+
+@media (max-width: 768px){
+
+    nav{
+
+        position: relative;
+
+        flex-wrap: wrap;
+
+    }
+
+
+    nav .menu-toggle{
+
+        display: block !important;
+
+        background: transparent;
+
+        color: white;
+
+        border: none;
+
+        font-size: 30px;
+
+        padding: 5px;
+
+        cursor: pointer;
+
+    }
+
+
+    nav ul{
+
+        display: none;
+
+        width: 100%;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 18px;
+
+        padding: 20px 0;
+
+        margin: 0;
+
+    }
+
+
+    nav ul.activo{
+
+        display: flex;
+
+    }
 
 }

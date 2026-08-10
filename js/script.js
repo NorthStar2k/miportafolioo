@@ -409,4 +409,11 @@ formulario.addEventListener("submit", async function(e){
     botonEnviar.textContent = "Enviar mensaje";
 
 });
+const menuToggle = document.querySelector(".menu-toggle");
+const menu = document.querySelector("nav ul");
 
+menuToggle.addEventListener("click", () => {
+
+    menu.classList.toggle("activo");
+
+});
